@@ -4,7 +4,7 @@ export const generatToken = (userid, res) =>{
         expiresIn: "7d",
     });
 
-    res.cokie("jwt", token, {
+    res.cookie("jwt", token, {
         maxAge: 7 * 24 * 60 * 60 * 1000,
         httpOnly: true, //prevenet cross-site scripting attacks 
         sameSite: "strict", //prevents cross-site request forgery attacks
