@@ -55,6 +55,7 @@ export const sendMessage = async(req, res) => {
 
         await newMessage.save();
 
+        // socket.io functionality is used here 
         res.status(201).json(newMessage)
         
     } catch (error) {
